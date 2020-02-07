@@ -127,6 +127,24 @@ function copyright(string $year) {
 //print the copyright
 print_r(copyright(date('Y')));
 
+//-------------------------------------------------------
+
+
+new_exercise(8);
+function login(string $email, string $password) {
+    if($email == 'john@example.be' && $password == 'pocahontas') {
+        return 'Welcome John Smith';
+    }
+    return 'No access';
+}
+//should greet the user with his full name (John Smith)
+$login = login('john@example', 'pocahontas');
+//no access
+$login = login('john@example', 'dfgidfgdfg');
+//no access
+$login = login('wrong@example', 'wrong');
+
+echo login();
 
 
 
